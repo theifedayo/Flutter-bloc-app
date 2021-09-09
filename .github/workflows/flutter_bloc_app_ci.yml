@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  flutter_test:
+  build:
     name : Run flutter test and analyze
     runs-on : ubuntu-latest
     steps:
