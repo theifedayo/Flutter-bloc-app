@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_bloc_app/presentation/screens/todos_screen.dart';
 import 'package:flutter_bloc_app/presentation/router.dart';
 
 void main(){
