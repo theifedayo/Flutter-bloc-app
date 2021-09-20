@@ -1,2 +1,2 @@
-# flutter_bloc_app
- Understanding bloc pattern
+# flutter Bloc App
+ Understanding bloc pattern in building a todo app
