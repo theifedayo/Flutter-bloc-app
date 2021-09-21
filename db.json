@@ -1,3 +1,9 @@
 {
-  "todos" : []
+  "todos" : [
+    {
+      "todo": "Get milk",
+      "isCompleted": "false",
+      "id": 1
+    }
+  ]
 }

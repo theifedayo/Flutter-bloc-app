@@ -15,6 +15,7 @@ dependencies:
   flutter_bloc: ^7.0.0
   font_awesome_flutter: ^8.4.0
   page_transition:
+  http:
 
 dev_dependencies:
   flutter_test:
