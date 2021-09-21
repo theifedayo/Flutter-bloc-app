@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app/constants/strings.dart';
 import 'package:flutter_bloc_app/cubit/todos_cubit.dart';
+import 'package:flutter_bloc_app/cubit/add_todo_cubit.dart';
 import 'package:flutter_bloc_app/data/network_service.dart';
 import 'package:flutter_bloc_app/presentation/screens/add_todo_screen.dart';
 import 'package:flutter_bloc_app/presentation/screens/edit_todo_screen.dart';
@@ -29,7 +30,10 @@ class AppRouter {
       case EDIT_TODO_ROUTE:
         return MaterialPageRoute(builder: (_) => EditTodoScreen());
       case ADD_TODO_ROUTE:
-        return MaterialPageRoute(builder: (_) => AddTodoScreen());
+        return MaterialPageRoute(builder: (_) => BlocProvider(
+            create: (BuildContext context) => AddTodoCubit(),
+            child: AddTodoScreen()
+        ));
       default:
         return null;
     }

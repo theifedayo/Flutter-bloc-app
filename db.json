@@ -1,8 +1,8 @@
 {
-  "todos" : [
+  "todos": [
     {
       "todo": "Get milk",
-      "isCompleted": "false",
+      "isCompleted": "true",
       "id": 1
     }
   ]
