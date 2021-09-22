@@ -14,24 +14,27 @@ import '../data/repository.dart';
 class AppRouter {
 
   Repository repository;
+  TodosCubit todosCubit;
 
   AppRouter(){
     repository = Repository(networkService: NetworkService());
+    todosCubit = TodosCubit(repository: repository);
   }
 
 
   Route generateRoute(RouteSettings settings){
     switch(settings.name){
       case "/":
-        return MaterialPageRoute(builder: (_) => BlocProvider(
-            create: (BuildContext context) => TodosCubit(repository: repository),
+        return MaterialPageRoute(builder: (_) => BlocProvider.value(
+            value: todosCubit,
+
             child: TodoScreen()
         ));
       case EDIT_TODO_ROUTE:
         return MaterialPageRoute(builder: (_) => EditTodoScreen());
       case ADD_TODO_ROUTE:
         return MaterialPageRoute(builder: (_) => BlocProvider(
-            create: (BuildContext context) => AddTodoCubit(),
+            create: (BuildContext context) => AddTodoCubit(repository: repository, todosCubit: todosCubit),
             child: AddTodoScreen()
         ));
       default:
