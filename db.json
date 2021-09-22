@@ -2,18 +2,23 @@
   "todos": [
     {
       "todo": "Get milk",
-      "isCompleted": "true",
+      "isCompleted": "false",
       "id": 1
     },
     {
       "todo": "new go",
-      "isCompleted": "true",
+      "isCompleted": "false",
       "id": 2
     },
     {
       "todo": "dsffdfsf",
       "isCompleted": "false",
       "id": 3
+    },
+    {
+      "todo": "dsd",
+      "isCompleted": "false",
+      "id": 4
     }
   ]
 }
