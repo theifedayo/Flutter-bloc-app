@@ -19,13 +19,11 @@ class AddTodoCubit extends Cubit<AddTodoState> {
       return;
     }
     emit(AddingTodo());
-    Timer(Duration(seconds: 2), (){
-      repository.addTodo(message).then((todo){
-        if(todo != null){
-          todosCubit.addTodo(todo);
-          emit(TodoAdded());
-        }
-      });
+    repository.addTodo(message).then((todo){
+      if(todo != null){
+        todosCubit.addTodo(todo);
+        emit(TodoAdded());
+      }
     });
   }
 }

@@ -28,6 +28,8 @@ class EditTodoCubit extends Cubit<EditTodoState> {
     repository.updateTodo(message, todo.id).then((isEdited){
       if(isEdited){
         todo.todoMessage = message;
+        todosCubit.updateTodoList();
+        emit(TodoEdited());
       }
     });
   }
