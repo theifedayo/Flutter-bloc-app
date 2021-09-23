@@ -7,17 +7,17 @@
     },
     {
       "todo": "new go",
-      "isCompleted": "false",
+      "isCompleted": "true",
       "id": 2
     },
     {
       "todo": "dsffdfsf",
-      "isCompleted": "false",
+      "isCompleted": "true",
       "id": 3
     },
     {
       "todo": "dsd",
-      "isCompleted": "false",
+      "isCompleted": "true",
       "id": 4
     }
   ]
