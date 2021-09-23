@@ -1,9 +1,24 @@
 {
   "todos": [
     {
-      "todo": "Get milk",
-      "isCompleted": "true",
+      "todo": "Get milk and see Dipo",
+      "isCompleted": "false",
       "id": 1
+    },
+    {
+      "todo": "saddsd",
+      "isCompleted": "true",
+      "id": 4
+    },
+    {
+      "todo": "new wine",
+      "isCompleted": "false",
+      "id": 5
+    },
+    {
+      "todo": "cool",
+      "isCompleted": "false",
+      "id": 6
     }
   ]
 }

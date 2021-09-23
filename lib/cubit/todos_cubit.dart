@@ -33,4 +33,21 @@ class TodosCubit extends Cubit<TodosCubitState> {
     if(currentState is TodosLoaded)
     emit(TodosLoaded(todos: currentState.todos));
   }
+
+  addTodo(Todo todo) {
+    final currentState = state;
+    if(currentState is TodosLoaded){
+      var todoList = currentState.todos;
+      todoList.add(todo);
+      emit(TodosLoaded(todos: todoList));
+    }
+  }
+
+  void deleteTodo(Todo todo){
+    final currentState = state;
+    if(currentState is TodosLoaded){
+      var todoList = currentState.todos.where((element) => element.id != todo.id).toList();
+      emit(TodosLoaded(todos: todoList));
+    }
+  }
 }

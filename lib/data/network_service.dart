@@ -24,4 +24,22 @@ class NetworkService {
       return false;
     }
   }
+
+  Future<Map> addTodo(Map<String, String> todoObj) async {
+    try{
+      final response = await post(Uri.parse(baseUrl + "/todos"), body: todoObj);
+      return jsonDecode(response.body);
+    }catch(err){
+      return null;
+    }
+  }
+
+  Future<bool> deleteTodo(int id) async {
+    try{
+      await delete(Uri.parse(baseUrl + "/todos/$id"));
+      return true;
+    }catch(err){
+      return false;
+    }
+  }
 }
